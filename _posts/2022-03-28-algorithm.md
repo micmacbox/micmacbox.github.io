@@ -174,3 +174,51 @@ function solution(s){
   return answer;
 }
 ```
+
+## 키패드 누르기
+
+[카카오인턴 키패드 누르기](https://programmers.co.kr/learn/courses/30/lessons/67256)
+
+```
+const keypad = {
+    1: [0,0], 2:[0,1], 3:[0,2],
+    4: [1,0], 5:[1,1], 6:[1,2],
+    7: [2,0], 8:[2,1], 9:[2,2],
+              0:[3,1]
+};
+
+function setHandPosition(hand, pos){
+    this[hand] = pos;
+}
+
+function solution(numbers, hand) {
+    let handPos = {
+        left: [3,0],
+        right: [3,2]
+    }
+    return numbers.map(number => {
+        if(/[1,4,7]/.test(number)){
+            setHandPosition.call(handPos, 'left', keypad[number]);
+            return 'L'
+        }
+        if(/[3,6,9]/.test(number)){
+            setHandPosition.call(handPos, 'right', keypad[number]);
+            return 'R'
+        }
+
+        const distL = Math.abs(keypad[number][0]-handPos.left[0])+Math.abs(keypad[number][1]-handPos.left[1])
+        const distR = Math.abs(keypad[number][0]-handPos.right[0])+Math.abs(keypad[number][1]-handPos.right[1])
+
+        if(distL<distR) {
+            setHandPosition.call(handPos, 'left', keypad[number]);
+            return 'L'
+        }else if(distR<distL) {
+            setHandPosition.call(handPos, 'right', keypad[number]);
+            return 'R'
+        }else{
+            setHandPosition.call(handPos, hand, keypad[number]);
+            return hand==='left'?'L':'R';
+        }
+    }).join('')
+}
+```
