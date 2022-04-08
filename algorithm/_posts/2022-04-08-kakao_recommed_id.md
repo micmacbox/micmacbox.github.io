@@ -76,41 +76,13 @@ new_id에 나타날 수 있는 특수문자는 `-*.~!@#$%^&\*()=+[{]}:?,<>/` 로
 
 ##### **[입출력 예]**
 
-no
-
-new_id
-
-result
-
-예1
-
-`"...!@BaT#*..y.abcdefghijklm"`
-
-`"bat.y.abcdefghi"`
-
-예2
-
-`"z-+.^."`
-
-`"z--"`
-
-예3
-
-`"=.="`
-
-`"aaa"`
-
-예4
-
-`"123_.def"`
-
-`"123_.def"`
-
-예5
-
-`"abcdefghijklmn.p"`
-
-`"abcdefghijklmn"`
+| no  | new_id                         | result            |
+| --- | ------------------------------ | ----------------- |
+| 예1 | "...!@BaT#\*..y.abcdefghijklm" | "bat.y.abcdefghi" |
+| 예2 | "z-+.^."                       | "z--"             |
+| 예3 | "=.="                          | "aaa"             |
+| 예4 | "123\_.def"                    | "123\_.def"       |
+| 예5 | "abcdefghijklmn.p"             | "abcdefghijklmn"  |
 
 ##### **입출력 예에 대한 설명**
 
