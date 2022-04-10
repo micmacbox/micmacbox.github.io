@@ -1,6 +1,6 @@
 ---
 layout: post
-title: this
+title: 자바스크립트 this
 categories: javascript
 tags: [frontend, javascript]
 date: 2022-04-06 15:32 +0800
@@ -25,6 +25,7 @@ console.log(this.a) 	//1
 ```
 
 delete 명령에 대해선 전역변수 선언과 전역객체 프로퍼티 할당은 다르게 동작한다.
+사용자가 의도치않게 삭제하는 것을 방지하는 차원에서 처음부터 전역객체의 프로퍼티로 할당한 경우에만 삭제가 된다. 이는 전역변수를 선언하면 자바스크립트 엔진이 자동으로 전역객체의 프로퍼티로 할당하며 해당 프로퍼티의 configurable속성을 false로 정의하기 때문이다.
 
 ```
 var a = 1;
