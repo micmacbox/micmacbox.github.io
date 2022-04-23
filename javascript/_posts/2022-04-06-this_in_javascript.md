@@ -37,11 +37,11 @@ delete window.b;					//true
 console.log(b, window.b, this.b)	//uncaught ReferenceError: b is not defined
 ```
 
-## 메서드로서 호출할때
+## 메서드로서 호출할 때
 
 ### 함수vs메서드
 
-함수와 메서드를 구분하는 차이는 *독립성*에 있다.
+함수와 메서드를 구분하는 차이는 **독립성**에 있다.
 함수: 그 자체로 독립적 기능을 수행
 메서드: 자신을 호출한 대상 객체에 관한 동작 수행
 
@@ -51,15 +51,15 @@ console.log(b, window.b, this.b)	//uncaught ReferenceError: b is not defined
 :함수 앞에 객체가 명시 되어있는 경우는 메서드로서 호출한 것이다. (점 혹은 대괄호 표기법으로 호출한 경우)
 
 ```
-    var func = function(x) {
-	    console.log(this, x);
-    };
-    func(1); //window {...} 함수로서 호출
+var func = function(x) {
+    console.log(this, x);
+};
+func(1); //window {...} 함수로서 호출
 
-	var obj = {
-		method: func
-	};
-	obj.method(2); //{method: f} 메서드로서 호출
+var obj = {
+    method: func
+};
+obj.method(2); //{method: f} 메서드로서 호출
 ```
 
 ### 메서드 내부에서의 this
@@ -67,14 +67,51 @@ console.log(b, window.b, this.b)	//uncaught ReferenceError: b is not defined
 this에는 호출한 주체에 대한 정보가 담기는데 어떤 함수를 메서드로서 호출하는 경우 호출주체는 함수명 앞의 객체이다.
 
 ```
-	var obj = {
-		methodA: function() {console.log(this);},
-		inner: {
-			methodB: function() {console.log(this);}
-		}
-	};
-	obj.methodA(); //{methodA:f, inner:{...}} (===obj)
-	obj.inner.methodB(); //{methodB:f} (===obj.inner)
+var obj = {
+    methodA: function() {console.log(this);},
+    inner: {
+        methodB: function() {console.log(this);}
+    }
+};
+obj.methodA(); //{methodA:f, inner:{...}} (===obj)
+obj.inner.methodB(); //{methodB:f} (===obj.inner)
+```
+
+## 함수로서 호출할 때
+
+### 함수 내부에서의 this
+
+어떤 함수를 함수로서 호출할 경우애는 호출주체(객체)를 명시하지 않고 개발자가 코드에 직접 관여해 실행한 것이기 때문에 this가 지정되지 않아 this는 전역 객체를 바라본다.
+
+### this를 바인딩하지 않는 함수
+
+es6에서는 함수 내부에서 this가 전역객체를 바라보는 문제를 보완하고자 **화살표 함수**를 도입했다.
+화살표 함수는 실행 컨텍스트를 생성할 때 this 바인딩 과정 자체가 빠지게 되어 상위 스코프의 this를 활용한다.
+
+```
+var obj = {
+    innerObj: {
+        outer: function() {
+            console.log(this); //{outer: f}
+
+            var innerFunc = function() {
+                console.log(this); //window {...}
+            }
+            var innerFuncArrow = ()=> {
+                console.log( this); //{outer: f}
+            }
+            innerFunc();
+            innerFuncArrow();
+        }
+
+    },
+    outer: function() {
+        console.log(this); //{innerObj: (...), outer:f}
+    }
+};
+
+obj.innerObj.outer();
+obj.outer();
 ```
 
 참고: 코어 자바스크립트
