@@ -12,7 +12,9 @@ date: 2022-08-15 01:00 +0800
 [프로그래머스 바로가기](https://school.programmers.co.kr/learn/courses/30/lessons/12940)
 
 > 공약수(common divisor)란 두 수 이상의 여러 수의 공통된 약수를 의미한다.
+
 > 최대공약수 GCD(Greatest Common Divisor): 공약수 중 최대인 수
+
 > 최소공배수 LCM(Least Common Multiple): 두 수에 공통으로 존재하는 배수 중 가장 작은 수
 
 최대공약수는 유클리드 알고리즘을 이용하면 쉽게 풀 수 있다.
