@@ -7,13 +7,13 @@ date: 2022-08-15 01:00 +0800
 # toc: true
 ---
 
-## ❔ 최대공약수와 최소공배수
+# ❔ 최대공약수와 최소공배수
 
 [프로그래머스 바로가기](https://school.programmers.co.kr/learn/courses/30/lessons/12940)
 
-_공약수(common divisor)란 두 수 이상의 여러 수의 공통된 약수를 의미한다.
-최대공약수 GCD(Greatest Common Divisor): 공약수 중 최대인 수
-최소공배수 LCM(Least Common Multiple): 두 수에 공통으로 존재하는 배수 중 가장 작은 수_
+> 공약수(common divisor)란 두 수 이상의 여러 수의 공통된 약수를 의미한다.
+> 최대공약수 GCD(Greatest Common Divisor): 공약수 중 최대인 수
+> 최소공배수 LCM(Least Common Multiple): 두 수에 공통으로 존재하는 배수 중 가장 작은 수
 
 최대공약수는 유클리드 알고리즘을 이용하면 쉽게 풀 수 있다.
 
@@ -37,7 +37,9 @@ function lcm(n, m) {
 
 ```
 
-## ❔ 문자열 내 마음대로 정렬하기
+<br>
+
+# ❔ 문자열 내 마음대로 정렬하기
 
 [프로그래머스 바로가기](https://school.programmers.co.kr/learn/courses/30/lessons/12915)
 
@@ -64,7 +66,9 @@ function solution(strings, n) {
 
 ```
 
-## ❔ 하샤드 수
+<br>
+
+# ❔ 하샤드 수
 
 [프로그래머스 바로가기](https://school.programmers.co.kr/learn/courses/30/lessons/12947)
 
@@ -83,7 +87,9 @@ function solution(x) {
 
 ```
 
-## ❔ K번째수
+<br>
+
+# ❔ K번째수
 
 [프로그래머스 바로가기](https://school.programmers.co.kr/learn/courses/30/lessons/42748)
 
@@ -98,7 +104,9 @@ function solution(array, commands) {
 }
 ```
 
-## ❔ 완주하지 못한 선수
+<br>
+
+# ❔ 완주하지 못한 선수
 
 [프로그래머스 바로가기](https://school.programmers.co.kr/learn/courses/30/lessons/42576)
 
@@ -115,7 +123,9 @@ function solution(participant, completion) {
 }
 ```
 
-## ❔ 폰켓몬
+<br>
+
+# ❔ 폰켓몬
 
 [프로그래머스 바로가기](https://school.programmers.co.kr/learn/courses/30/lessons/1845)
 
@@ -130,6 +140,8 @@ function solution(nums) {
     return (nums.length/2 >= s)? s : nums.length/2 ;
 }
 ```
+
+<br>
 
 이전에 풀었던 문제들도 몇개 있어서 다시 풀어봤는데도 푸는 방식은 크게 달라진게 없는 것 같다.
 알고리즘 열심히 해봐야지 아자아자~
