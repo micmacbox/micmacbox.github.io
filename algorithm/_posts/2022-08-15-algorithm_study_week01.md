@@ -130,3 +130,6 @@ function solution(nums) {
     return (nums.length/2 >= s)? s : nums.length/2 ;
 }
 ```
+
+이전에 풀었던 문제들도 몇개 있어서 다시 풀어봤는데도 푸는 방식은 크게 달라진게 없는 것 같다.
+알고리즘 열심히 해봐야지 아자아자~
