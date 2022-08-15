@@ -9,7 +9,7 @@ date: 2022-08-15 01:00 +0800
 
 # ❔ 최대공약수와 최소공배수
 
-[프로그래머스 바로가기](https://school.programmers.co.kr/learn/courses/30/lessons/12940)
+[문제 바로가기](https://school.programmers.co.kr/learn/courses/30/lessons/12940)
 
 > 공약수(common divisor)란 두 수 이상의 여러 수의 공통된 약수를 의미한다.
 
@@ -43,7 +43,7 @@ function lcm(n, m) {
 
 # ❔ 문자열 내 마음대로 정렬하기
 
-[프로그래머스 바로가기](https://school.programmers.co.kr/learn/courses/30/lessons/12915)
+[문제 바로가기](https://school.programmers.co.kr/learn/courses/30/lessons/12915)
 
 분명 예전에 풀었던 문제였는데 내가 짠 코드도 기억이 안났다 왜 이렇게 짰더라?^^ㅋㅋ...
 String.prototype.charCodeAt() 으로 푸는 방법도 있고, 나는 n번째 문자 그대로를 비교하여 Boolean -> Num으로 리턴하여 풀었다.
@@ -72,7 +72,7 @@ function solution(strings, n) {
 
 # ❔ 하샤드 수
 
-[프로그래머스 바로가기](https://school.programmers.co.kr/learn/courses/30/lessons/12947)
+[문제 바로가기](https://school.programmers.co.kr/learn/courses/30/lessons/12947)
 
 reduce를 이용하면 쉽게 풀 수 있는 문제.
 주어진 숫자를 문자열로 바꿀 수 없는 조건이 걸린 경우엔 각 자릿수를 10으로 나눈 나머지 값을 더하여 자릿수의 합을 구해 풀 수도 있겠다.
@@ -93,7 +93,7 @@ function solution(x) {
 
 # ❔ K번째수
 
-[프로그래머스 바로가기](https://school.programmers.co.kr/learn/courses/30/lessons/42748)
+[문제 바로가기](https://school.programmers.co.kr/learn/courses/30/lessons/42748)
 
 내장함수들로 쉽게 접근이 가능했다.
 
@@ -110,7 +110,7 @@ function solution(array, commands) {
 
 # ❔ 완주하지 못한 선수
 
-[프로그래머스 바로가기](https://school.programmers.co.kr/learn/courses/30/lessons/42576)
+[문제 바로가기](https://school.programmers.co.kr/learn/courses/30/lessons/42576)
 
 ## 문제풀이
 
@@ -129,7 +129,7 @@ function solution(participant, completion) {
 
 # ❔ 폰켓몬
 
-[프로그래머스 바로가기](https://school.programmers.co.kr/learn/courses/30/lessons/1845)
+[문제 바로가기](https://school.programmers.co.kr/learn/courses/30/lessons/1845)
 
 배열 nums에서 중복값을 제거한 사이즈를 s라고 할 때
 최대 값은 nums의 2분의 1이기 때문에 nums의 반값이 s보다 같거나 클 경우 s를 리턴 해주었다.
