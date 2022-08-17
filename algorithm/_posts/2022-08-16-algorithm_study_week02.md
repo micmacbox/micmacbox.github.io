@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "[알고리즘 스터디] 1주차"
+title: "[알고리즘 스터디] 2주차"
 categories: algorithm
 tags: [javascript, algorithm]
-date: 2022-08-15 01:00 +0800
+date: 2022-08-17 01:00 +0800
 # toc: true
 ---
 
