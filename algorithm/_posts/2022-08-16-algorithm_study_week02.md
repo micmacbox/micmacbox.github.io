@@ -88,6 +88,7 @@ function solution(s) {
 # ❔ 기능개발
 
 [문제 바로가기](https://school.programmers.co.kr/learn/courses/30/lessons/42586)
+
 레벨2 치고는 쉽게 풀었다
 그런데 워낙 사고하는 스피드가 느려서 많이 푸는 연습을 해야할듯
 
