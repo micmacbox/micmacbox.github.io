@@ -84,3 +84,61 @@ function solution(s) {
 ```
 
 <br>
+
+# ❔ 프린터
+
+[문제 바로가기](https://school.programmers.co.kr/learn/courses/30/lessons/42587)
+
+문제 이해하는것도 어려웠다.. 내 이해력 어쩔..ㅋㅋ
+처음 풀어보고 두번째는 좀 예쁘게 풀어보려고 애썼는데 가독성이 좋은지는 모르겠다
+
+## 첫번째 문제풀이
+
+```
+function solution(priorities, location) {
+    let answer = [];
+    let _priorities = priorities, _location = location, max = Math.max(...priorities);
+    while(true){
+        const cur = _priorities.shift();
+
+        if(_location===0 && max === cur){
+            answer.push(cur);
+            break;
+        }
+        if(cur === max){
+            answer.push(cur);
+            max = Math.max(...priorities);
+        }else{
+            _priorities.push(cur);
+        }
+        _location--;
+        if(_location ==-1) _location = _priorities.length-1;
+    }
+
+    return answer.length;
+}
+```
+
+## 두번째 문제풀이
+
+```
+function solution(priorities, location) {
+  let answer = 0;
+  let _priorities = priorities.map((x, i) => ({ priority: x, loc: i }));
+
+  while (true) {
+    const max = Math.max(...Array.from(_priorities.values(), (x, i) => x.priority));
+    const cur = _priorities.shift();
+
+    if (cur.loc === location && cur.priority === max) {
+      answer++;
+      break;
+    }
+    if (cur.priority === max) answer++;
+    else _priorities.push(cur);
+  }
+  return answer;
+}
+```
+
+<br>
