@@ -189,7 +189,7 @@ function solution(bridge_length, weight, truck_weights) {
 
   while (true) {
     const start = index - (bridge_length - 1) < 0 ? 0 : index - (bridge_length - 1);
-    const curWeight =ing.slice(start, index).reduce((cur, acc) => acc += cur, 0) + truck_weights[0];
+    const curWeight =ing.slice(start, index).reduce((acc, cur) => acc += cur, 0) + truck_weights[0];
 
     if (curWeight <= weight) ing.push(truck_weights.shift());
     else ing.push(0);
