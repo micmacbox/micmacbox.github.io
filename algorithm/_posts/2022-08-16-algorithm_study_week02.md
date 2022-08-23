@@ -172,3 +172,39 @@ function solution(priorities, location) {
 ```
 
 <br>
+
+# ❔ 다리를 지나는 트럭
+
+[문제 바로가기](https://school.programmers.co.kr/learn/courses/30/lessons/42583)
+
+문제가 너무 난해해서 이해하는데 힘들었다..
+다리 위에 올라와있는 트럭들의 총 무게를 구해 다음 트럭이 진입 할 수 있는지 확인했고
+
+모든 트럭이 진입하였을때 다리길이를 더해주었다.
+
+## 문제풀이
+
+```
+function solution(bridge_length, weight, truck_weights) {
+  let index = 0;
+  let ing = [];
+
+  while (true) {
+    const start = index - (bridge_length - 1) < 0 ? 0 : index - (bridge_length - 1);
+    const curWeight =ing.slice(start, index).reduce((cur, acc) => acc += cur, 0) + truck_weights[0];
+
+    if (curWeight <= weight) ing.push(truck_weights.shift());
+    else ing.push(0);
+    index++;
+
+    if (truck_weights.length === 0) {
+      index += bridge_length;
+      break;
+    }
+  }
+  return index;
+}
+
+```
+
+<br>
