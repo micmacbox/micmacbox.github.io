@@ -184,23 +184,18 @@ function solution(priorities, location) {
 
 ```
 function solution(bridge_length, weight, truck_weights) {
-  let index = 0;
+  let time = 0;
   let ing = [];
 
-  while (true) {
-    const start = index - (bridge_length - 1) < 0 ? 0 : index - (bridge_length - 1);
-    const curWeight =ing.slice(start, index).reduce((acc, cur) => acc += cur, 0) + truck_weights[0];
+  while (truck_weights.length) {
+    const curWeight =ing.slice(0, bridge_length-1).reduce((acc, cur) => acc += cur, truck_weights[0]);
 
     if (curWeight <= weight) ing.push(truck_weights.shift());
     else ing.push(0);
-    index++;
-
-    if (truck_weights.length === 0) {
-      index += bridge_length;
-      break;
-    }
+    if(ing.length === bridge_length) ing.shift();
+    time++;
   }
-  return index;
+  return time += bridge_length;
 }
 
 ```
