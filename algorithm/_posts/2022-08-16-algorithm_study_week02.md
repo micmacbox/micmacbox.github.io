@@ -177,7 +177,8 @@ function solution(priorities, location) {
 
 [문제 바로가기](https://school.programmers.co.kr/learn/courses/30/lessons/42583)
 
-문제가 너무 난해해서 이해하는데 힘들었다..
+문제가 너무 난해해서 이해하는데 힘들었다.
+
 다리 위에 올라와있는 트럭들의 총 무게를 구해 다음 트럭이 진입 할 수 있는지 확인했고 모든 트럭이 진입하였을때 다리길이를 더해주었다.
 
 ## 문제풀이
