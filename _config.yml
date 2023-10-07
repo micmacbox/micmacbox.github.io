@@ -33,13 +33,13 @@ exclude:
 
 # Optimize Jekyl SEO Tag
 twitter:
-  username: it_margot
+  username: bravo__jamie
   card: summary
 logo: logo.png
 social:
   name: j-me
   links:
-    - https://twitter.com/it_margot
+    - https://twitter.com/bravo__jamie
     - https://github.com/micmacbox
 google_site_verification: xxxxx
 lang: ko
